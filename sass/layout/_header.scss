@@ -1,0 +1,62 @@
+.Header {
+  padding: 1.5rem 0;
+
+  .wrapper.flex {
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 18rem;
+    height: auto;
+    line-height: 0;
+  }
+}
+
+.HeaderNav {
+  flex-grow: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $font-paragraph;
+
+  &__container {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .menu {
+    list-style: none;
+
+    &-item {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 3.2rem;
+      }
+    }
+  }
+
+  &__link a {
+    font-size: 1.8rem;
+    letter-spacing: -0.1px;
+    border-bottom: 3px solid transparent;
+    transition: .25s all;
+
+    &[aria-current="page"] {
+      font-weight: 700;
+      cursor: default;
+      pointer-events: none;
+      border-bottom: 3px solid $color-primary-dark;
+    }
+
+    &:not([aria-current="page"]) {
+      &:hover,
+      &:focus {
+        color: $color-primary-dark;
+      }
+
+      &:focus {
+        border-bottom: 3px solid $color-primary-dark;
+      }
+    }
+  }
+}

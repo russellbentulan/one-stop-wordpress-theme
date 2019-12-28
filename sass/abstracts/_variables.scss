@@ -49,6 +49,9 @@ $col-2-of-3: calc( (100% - #{$gutter-horizontal}) / 3 * 2);
 $font-size-md: 1.8rem;
 $font-size-lg: 2.4rem;
 
+$font-heading: "Rift", sans-serif;
+$font-paragraph: "Acumin Pro", sans-serif;
+
 // Mobile Breakpoints
 $xl: 1200px;
 $lg: 980px;

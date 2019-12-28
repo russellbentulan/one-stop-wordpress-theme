@@ -1,5 +1,6 @@
 body {
-    color: $grey-5;
+  font-family: $font-paragraph;
+  color: $grey-5;
 }
 
 p {
@@ -7,25 +8,10 @@ p {
     line-height: 1.4;
 }
 
-.main-nav {
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'Acumin Pro', sans-serif;
-
-    &__link a {
-        font-size: 1.8rem;
-        letter-spacing: -.1px;
-        
-        &[aria-current="page"] {
-            font-weight: 700;
-        }
-    }
-}
-
 [class^="heading--"] {
     text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Rift', sans-serif;
+    font-family: $font-heading;
     font-style: italic;
     margin-bottom: 2rem;
 }

@@ -1,6 +1,6 @@
 .btnArrow {
   font-weight: 700;
-  font-family: "Rift", sans-serif;
+  font-family: $font-heading;
   font-size: $font-size-lg;
   letter-spacing: 0.5px;
 
@@ -16,7 +16,7 @@
 }
 
 .btn {
-  font-family: "Rift", sans-serif;
+  font-family: $font-heading;
   font-weight: 700;
   text-transform: uppercase;
   color: $grey-5;

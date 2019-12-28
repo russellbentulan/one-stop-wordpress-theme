@@ -16,20 +16,29 @@
 
 <body <?php body_class(); ?>>
   <a href="#maincontent" class="skiplink">Go to Main Content</a>
-  <header>
-    <div class="main-nav">
-      <div class="wrapper flex">
-        <button class="menu-button">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="visuallyhidden">Menu</span>
-        </button>
-        <?php wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'container_class' => 'menu'
-        )); ?>
+
+  <header class="Header">
+    <div class="wrapper flex">
+
+      <?php
+      $custom_logo_id = get_field('logo', 'option');
+      $logo_img = wp_get_attachment_image($custom_logo_id, 'small');
+      ?>
+      <a href="<?= get_home_url(); ?>" class="logo"><?php echo $logo_img; ?></a>
+
+
+      <div class="HeaderNav">
+        <?php 
+          wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'container' => 'nav',
+            'container_class' => 'HeaderNav__container',
+            'before' => '<span class="HeaderNav__link">',
+            'after' => '</span>'
+          )); 
+        ?>
       </div>
+
     </div>
   </header>
 
