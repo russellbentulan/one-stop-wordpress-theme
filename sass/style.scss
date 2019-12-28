@@ -8,10 +8,13 @@
 @import 'abstracts/variables';
 
 @import 'base/normalize',
-        'base/base';
+        'base/base',
+        'base/typography';
+        
+@import 'components/buttons',
+        'components/comments';
 
-@import 'layout/navigation';
-
-@import 'components/comments';
+@import 'layout/flexGrid',
+        'layout/navigation';
 
 @import 'pages/home';

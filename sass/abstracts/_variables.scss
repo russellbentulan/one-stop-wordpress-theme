@@ -1,3 +1,54 @@
+// Colours - contrast on white
+$color-primary: #ec1f27; // 4.38w
+$color-primary-light: #fb595e; // 3.13w
+$color-primary-dark: #c1161d; // 6.17w
+$color-primary-darker: #861417; // 9.87w
+
+$color-secondary: #005c97; // 7.05w
+$color-secondary-light: #fff; // 0w
+$color-secondary-dark: #21445b; // 10.28w
+
+$color-tertiary: #363795; // 9.82w
+
+$color-accent: #f8cb57; // 1.53w
+$color-accent-light: #fce79a; // 1.23w
+$color-accent-dark: #b2852b; // 3.34w
+
+// Greyscale
+$grey-1: #dfdfe7; // 1.32w
+$grey-2: #b6b7c8; // 1.98w
+$grey-3: #7c7d9c; // 3.98w
+$grey-4: #4c4e70; // 7.98w
+$grey-5: #333544; // 12.11w
+$grey-6: #222235; // 15.57w
+
+// Shadows
+$shadow-1: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+$shadow-text: 0 4px 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.32);
+
+// Layout
+$grid-max-width: 114rem;
+
+$gutter-horizontal: 2.5vw;
+$gutter-horizontal-lg: calc( #{$gutter-horizontal} * 2 );
+$gutter-vertical: 8rem;
+
+$gutter-paragraph: 2rem;
+
+$col-1-of-2: calc( (100% - #{$gutter-horizontal}) / 2 );
+$col-1-of-3: calc( (100% - #{$gutter-horizontal} * 2) / 3 );
+$col-2-of-3: calc( (100% - #{$gutter-horizontal}) / 3 * 2);
+
+// Typography
+
+$font-size-md: 1.8rem;
+$font-size-lg: 2.4rem;
+
 // Mobile Breakpoints
 $xl: 1200px;
 $lg: 980px;

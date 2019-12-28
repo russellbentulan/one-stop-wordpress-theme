@@ -13,7 +13,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1150px;
+  max-width: $grid-max-width;
   width: 95%;
   margin: 0 auto;
 }
@@ -73,7 +73,7 @@ hr {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Acumin Pro", sans-serif;
   line-height: 1.5;
 }
 
@@ -109,7 +109,7 @@ a,
 ul,
 ol,
 table {
-  font-size: 2rem;
+  font-size: $font-size-md;
 }
 
 img {

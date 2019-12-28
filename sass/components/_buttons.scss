@@ -1,0 +1,66 @@
+.btnArrow {
+  font-weight: 700;
+  font-family: "Rift", sans-serif;
+  font-size: $font-size-lg;
+  letter-spacing: 0.5px;
+
+  i {
+    color: $color-primary;
+  }
+
+  &:hover {
+    i {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.btn {
+  font-family: "Rift", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $grey-5;
+  padding: 1.2rem 2rem;
+  letter-spacing: 0.8px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient((145deg, rgba(0, 0, 0, 0) 55%, #dea01e 55%));
+    z-index: -1;
+    transition: 0.25s all ease-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $color-accent;
+    z-index: -1;
+    transition: 0.25s all ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $grey-4;
+
+    &::after {
+      transform: translateX(15%);
+      opacity: 0;
+    }
+
+    &::before {
+      background-color: $color-accent-light;
+    }
+  }
+}

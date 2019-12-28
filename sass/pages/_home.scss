@@ -1,0 +1,63 @@
+.Hero {
+  position: relative;
+  color: $color-secondary-light;
+  text-shadow: $shadow-text;
+  font-size: 1.8rem;
+
+  &__bg {
+    background: linear-gradient(
+      to bottom,
+      rgba($color-secondary-dark, 0.45),
+      rgba($color-tertiary, 0.35)
+    );
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__textContainer {
+    align-self: center;
+    margin-left: auto;
+    margin-right: $gutter-horizontal-lg;
+    margin-top: $gutter-vertical;
+    margin-bottom: $gutter-vertical;
+    max-width: calc(#{$col-1-of-3} + #{$gutter-horizontal});
+    line-height: 1.2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 47.5%;
+      height: 100%;
+      background: linear-gradient(120deg, $color-secondary, $color-tertiary);
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0 100%);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-shadow: $shadow-text;
+  }
+
+  &__btn {
+    font-size: 2.4rem;
+    box-shadow: $shadow-2;
+    text-shadow: none;
+    transition: all 0.2s;
+    
+    &:hover {
+      box-shadow: $shadow-3;
+    }
+  }
+}
