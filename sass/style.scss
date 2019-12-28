@@ -1,0 +1,17 @@
+/*!
+* Theme Name: One Stop
+* Description: Custom Theme for an automotive shop
+* Version: 1.0
+* Author: Russell Bentulan
+* Author URI: https://russellbentulan.com/
+*/
+@import 'abstracts/variables';
+
+@import 'base/normalize',
+        'base/base';
+
+@import 'layout/navigation';
+
+@import 'components/comments';
+
+@import 'pages/home';
