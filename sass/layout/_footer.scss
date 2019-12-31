@@ -1,5 +1,33 @@
 .Footer {
-  background-color: $grey-6;
-  color: $color-secondary-light;
   padding: 2rem 0;
+  background: $grey-6;
+  color: #fff;
+  font-size: 1.6rem;
+
+  &__title {
+    line-height: 1;
+    font-size: 3.2rem;
+    font-family: $font-heading;
+    font-style: italic;
+    display: inline-block;
+    padding-right: 0.1rem;
+    background: linear-gradient(
+      (172deg, $color-primary 55%, $color-primary-dark 55%)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__phone {
+    color: $color-accent;
+  }
+
+  &__field {
+    display: block;
+    letter-spacing: 0.6px;
+  }
 }

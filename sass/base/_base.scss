@@ -16,6 +16,10 @@ html {
   max-width: $grid-max-width;
   width: 95%;
   margin: 0 auto;
+
+  & > *:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
 }
 
 .aligncenter {
@@ -107,7 +111,9 @@ li,
 a,
 ul,
 ol,
-table {
+table,
+address,
+span {
   font-size: $font-size-md;
 }
 
@@ -115,6 +121,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+address {
+  font-style: normal;
 }
 
 @media (max-width: $md) {

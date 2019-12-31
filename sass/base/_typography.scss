@@ -3,22 +3,29 @@ body {
   color: $grey-5;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-size: $font-size-lg;
+}
+
 p {
-    margin-bottom: $gutter-paragraph;
-    line-height: 1.4;
+  margin-bottom: $gutter-paragraph;
+  line-height: 1.4;
 }
 
 [class^="heading--"] {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: $font-heading;
-    font-style: italic;
-    margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-heading;
+  font-style: italic;
+  margin-bottom: 2rem;
 }
 
 .heading {
-    &--secondary {
-        font-size: 4.2rem;
-        letter-spacing: .1px;
-    }
+  &--secondary {
+    font-size: 4.2rem;
+    letter-spacing: 0.1px;
+  }
 }

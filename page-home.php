@@ -24,50 +24,12 @@
     </section>
     <!-- .Hero -->
 
-    <?php if (have_rows('contact_info', 'option')) : ?>
-      <?php while (have_rows('contact_info', 'option')) : the_row(); ?>
-        <section class="ShopInfo">
-          <div class="wrapper flex">
-
-            <?php
-            // Format html linebreaks into address field
-            $address = nl2br(get_sub_field('business_address'));
-            $tel = get_sub_field('phone_number');
-            ?>
-            <div class="col1of2 ShopInfo__contact ">
-
-              <address class="ShopInfo__address">
-                <?= $address ?>
-              </address>
-
-              <span class="ShopInfo__phone">
-                <i class="fas fa-phone-alt ShopInfo__phoneIcon" role="img" aria-label="Phone Number"></i>
-                <a href="tel:<?= $tel ?>" class="ShopInfo__phoneLink"><?= $tel ?></a>
-              </span>
-            </div>
-
-            <?php if (have_rows('business_hours')) : ?>
-              <div class="col1of2">
-                <strong class="ShopInfo__title">Business Hours</strong>
-
-                <div class="ShopInfo__hours">
-                  <?php while (have_rows('business_hours')) : the_row(); ?>
-
-                    <span class="ShopInfo__field">
-                      <span class="ShopInfo__fieldDay"><?= get_sub_field('work_day') ?>:</span>
-                      <span class="ShopInfo__fieldHours"><?= get_sub_field('work_hours') ?></span>
-                    </span>
-                  <?php endwhile; ?>
-                </div>
-              </div>
-            <?php endif; ?>
-
-          </div>
-        </section>
-      <?php endwhile; ?>
-    <?php endif; ?>
-    <!-- .ShopInfo -->
-
-  <?php endwhile; ?>
+    <section class="About">
+      <div class="wrapper flex">
+        
+      </div>
+    </section>
+    <!-- .About -->
+<?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
