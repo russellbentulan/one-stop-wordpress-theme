@@ -74,11 +74,23 @@
   }
 }
 
-.ShopInfo {
+.About {
   padding: $gutter-vertical 0;
   background: linear-gradient(
     182deg,
     $grey-1 20%,
     rgba(0,0,0,0) 20%
   );
+
+  .wrapper {
+    align-items: center;
+  }
+
+  &__imgContainer {
+    display: block;
+  }
+
+  &__field {
+    display: block;
+  }
 }

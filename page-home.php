@@ -24,12 +24,49 @@
     </section>
     <!-- .Hero -->
 
-    <section class="About">
-      <div class="wrapper flex">
-        
-      </div>
-    </section>
+    <?php if (get_field('about_title') && get_field('about_text') && get_field('about_button')) : ?>
+      <section class="About">
+        <div class="wrapper flex">
+          <?php
+          $about_image = get_field('about_image');
+          if ($about_image) :
+          ?>
+            <div class="About__imgContainer col1of2">
+              <?= wp_get_attachment_image($about_image['id'], 'full'); ?>
+            </div>
+          <?php endif; ?>
+
+          <div class="About__textContainer col1of2">
+            <div class="About__textContainer">
+              <h2 class="About__title"><?= get_field('about_title'); ?></h2>
+
+              <?= get_field('about_text'); ?>
+
+              <?php $about_link = get_field('about_button') ?>
+              <a href="<?= $about_link['url'] ?>" class="About__link"><?= $about_link['title'] ?></a>
+            </div>
+
+            <?php if (have_rows('contact_info', 'option')) : ?>
+              <?php while (have_rows('contact_info', 'option')) : the_row() ?>
+                <div class="About__hours">
+                  <h3>Hours</h3>
+
+                  <?php while (have_rows('business_hours')) : the_row(); ?>
+                    <span class="About__field">
+                      <span class="About__fieldDay"><?= get_sub_field('work_day') ?>:</span>
+                      <span class="About__fieldHours"><?= get_sub_field('work_hours') ?></span>
+                    </span>
+                  <?php endwhile; ?>
+                </div>
+              <?php endwhile; ?>
+            <?php endif; ?>
+          </div>
+        </div>
+      </section>
+    <?php endif; ?>
     <!-- .About -->
-<?php endwhile; ?>
+
+    
+  <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
