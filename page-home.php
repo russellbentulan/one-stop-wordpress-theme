@@ -43,7 +43,7 @@
               <?= get_field('about_text'); ?>
 
               <?php $about_link = get_field('about_button') ?>
-              <a href="<?= $about_link['url'] ?>" class="About__link"><?= $about_link['title'] ?></a>
+              <a href="<?= $about_link['url'] ?>" class="btn--arrow About__link"><?= $about_link['title'] ?></a>
             </div>
 
             <?php if (have_rows('contact_info', 'option')) : ?>
@@ -66,7 +66,10 @@
     <?php endif; ?>
     <!-- .About -->
 
-    
+    <section class="Services">
+      
+    </section>
+    <!-- .Services --> 
   <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>

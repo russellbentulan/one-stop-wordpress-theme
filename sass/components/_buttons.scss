@@ -1,16 +1,32 @@
-.btnArrow {
+.btn--arrow {
   font-weight: 700;
   font-family: $font-heading;
   font-size: $font-size-lg;
   letter-spacing: 0.5px;
-
-  i {
-    color: $color-primary;
+  display: inline-block;
+  transform: skewX(-5deg);
+  padding: 0 1.2rem;
+  background: $color-accent;
+  text-align: center;
+  line-height: 1.4;
+  transition: .2s all ease-out;
+  
+  &::after {
+    display: inline-block;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f101";
+    margin-left: 5px;
+    color: $color-primary-dark;
+    transition: .2s all ease-out;
   }
 
-  &:hover {
-    i {
-      color: $color-primary-light;
+  &:hover,
+  &:focus {
+    padding: 0 1.4rem;  
+    &::after {
+      margin-left: 10px;
+      color: $color-secondary-light;
     }
   }
 }
