@@ -36,9 +36,9 @@
             </div>
           <?php endif; ?>
 
-          <div class="About__textContainer col1of2">
+          <div class="col1of2">
             <div class="About__textContainer">
-              <h2 class="About__title"><?= get_field('about_title'); ?></h2>
+              <h2 class="heading--secondary heading--underlined"><?= get_field('about_title'); ?></h2>
 
               <?= get_field('about_text'); ?>
 
