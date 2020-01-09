@@ -45,21 +45,6 @@
               <?php $about_link = get_field('about_button') ?>
               <a href="<?= $about_link['url'] ?>" class="btn--arrow About__link"><?= $about_link['title'] ?></a>
             </div>
-
-            <?php if (have_rows('contact_info', 'option')) : ?>
-              <?php while (have_rows('contact_info', 'option')) : the_row() ?>
-                <div class="About__hours">
-                  <h3>Hours</h3>
-
-                  <?php while (have_rows('business_hours')) : the_row(); ?>
-                    <span class="About__field">
-                      <span class="About__fieldDay"><?= get_sub_field('work_day') ?>:</span>
-                      <span class="About__fieldHours"><?= get_sub_field('work_hours') ?></span>
-                    </span>
-                  <?php endwhile; ?>
-                </div>
-              <?php endwhile; ?>
-            <?php endif; ?>
           </div>
         </div>
       </section>
@@ -67,9 +52,9 @@
     <!-- .About -->
 
     <section class="Services">
-      
+
     </section>
-    <!-- .Services --> 
+    <!-- .Services -->
   <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
