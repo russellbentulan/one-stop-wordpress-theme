@@ -1,0 +1,65 @@
+.toggle {
+  &Bar {
+    background-color: $grey-6;
+    border-radius: 25px;
+    height: 5px;
+    transition: 0.2s all;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3.5px;
+    }
+  }
+
+  &Button {
+    margin: 0 auto;
+    display: block;
+    background-color: transparent;
+    width: 50px;
+    font-size: 16px;
+
+    &:hover {
+      & .HeaderNav__toggleBar {
+        background-color: $color-primary-darker;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: 0;
+
+      & .toggleBar {
+        transform: scale(1.2);
+      }
+    }
+
+    &.open {
+      transition: 0.2s transform;
+      &:focus {
+        transform: scale(1.2);
+      }
+
+      & .toggleBar {
+        background-color: $grey-6;
+
+        &.one {
+          transform: translate(0, 8.55px) rotate(45deg);
+        }
+
+        &.two {
+          transform: translateX(-5em);
+          box-shadow: none;
+          opacity: 0;
+
+          &:focus,
+          &:active {
+            border: 0;
+          }
+        }
+
+        &.three {
+          transform: translate(0, -8.55px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

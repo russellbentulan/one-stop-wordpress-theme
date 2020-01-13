@@ -28,10 +28,18 @@
 
 
       <div class="HeaderNav">
+        <button class="menu-button toggleButton" aria-controls="HeaderNav" aria-expanded="false">
+          <span class="visuallyhidden">Toggle Navigation</span>
+          <div class="toggleBar one"></div>
+          <div class="toggleBar two"></div>
+          <div class="toggleBar three"></div>
+        </button>
+
         <?php 
           wp_nav_menu(array(
             'theme_location' => 'primary',
             'container' => 'nav',
+            'container_id' => 'HeaderNav',
             'container_class' => 'HeaderNav__container',
             'before' => '<span class="HeaderNav__link">',
             'after' => '</span>'

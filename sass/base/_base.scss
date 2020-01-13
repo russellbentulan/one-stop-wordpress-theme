@@ -78,6 +78,7 @@ hr {
 
 body {
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 button {
@@ -127,7 +128,7 @@ address {
   font-style: normal;
 }
 
-@media (max-width: $md) {
+@media (max-width: $medium) {
   .alignright,
   .alignleft {
     float: none !important;

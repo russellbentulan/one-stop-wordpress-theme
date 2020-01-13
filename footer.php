@@ -20,7 +20,7 @@
         )); ?>
       </div>
 
-      <p class="Footer__copyright">One Stop Muffler & Brake &copy; <?php echo date('Y'); ?></p>
+      <p class="Footer__copyright"><?= get_bloginfo('name'); ?> &copy; <?= date('Y'); ?></p>
     </div>
 
     <?php if (have_rows('contact_info', 'option')) : ?>
