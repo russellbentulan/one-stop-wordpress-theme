@@ -3,6 +3,14 @@
   color: $color-secondary-light;
   text-shadow: $shadow-text;
   font-size: 1.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include media-query($medium-down) {
+    background-size: 150% auto;
+    background-position: top;
+  }
 
   &__bg {
     background: linear-gradient(
@@ -20,12 +28,17 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background: linear-gradient(
-        120deg,
-        $color-secondary,
-        $color-tertiary
-      );
+      background: linear-gradient(120deg, $color-secondary, $color-tertiary);
       clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    @include media-query($medium-down) {
+      &::after {
+        display: none;
+      }
+      .wrapper {
+        width: 100%;
+      }
     }
   }
 
@@ -42,16 +55,12 @@
 
     z-index: 2;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 47.5%;
-      height: 100%;
-      // background: linear-gradient(120deg, $color-secondary, $color-tertiary);
-      // clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0 100%);
-      z-index: -1;
+    @include media-query($medium-down) {
+      max-width: 100%;
+      margin: 30% 0 0 0;
+      padding: $gutter-vertical 10%;
+      background: linear-gradient(120deg, $color-secondary, $color-tertiary);
+      clip-path: polygon(0% 10%, 0 100%, 100% 100%, 100% 0);
     }
   }
 
@@ -60,6 +69,10 @@
     line-height: 1;
     letter-spacing: 1.5px;
     text-shadow: $shadow-text;
+
+    @include media-query($medium-down) {
+      font-size: 4.2rem;
+    }
   }
 
   &__btn {
@@ -76,11 +89,7 @@
 
 .About {
   padding: $gutter-vertical 0;
-  background: linear-gradient(
-    181deg,
-    $grey-1 8%,
-    rgba(0,0,0,0) 8%
-  );
+  background: linear-gradient(181deg, $grey-1 8%, rgba(0, 0, 0, 0) 8%);
 
   .wrapper {
     align-items: center;

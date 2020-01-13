@@ -4,7 +4,7 @@
 
 <? if (have_posts()) : while (have_posts()) : the_post() ?>
 
-    <section class="Hero" style="background: no-repeat center/cover url(<?= get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>);">
+    <section class="Hero" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>);">
       <div class="Hero__bg">
         <div class="wrapper flex">
           <div class="wrapper Hero__textContainer">

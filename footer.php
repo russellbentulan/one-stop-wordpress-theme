@@ -31,7 +31,7 @@
         $address = nl2br(get_sub_field('business_address'));
         $tel = get_sub_field('phone_number');
         ?>
-        <div class="col1of3">
+        <div class="col1of3 Footer__contactInfo">
           <h2 class="Footer__title">Location</h2>
           <address class="Footer__address">
             <?= $address ?>
@@ -44,7 +44,7 @@
         </div>
 
         <?php if (have_rows('business_hours')) : ?>
-          <div class="col1of3">
+          <div class="col1of3 Footer__contactInfo">
             <h2 class="Footer__title">Business Hours</h2>
 
             <div class="Footer__hours">

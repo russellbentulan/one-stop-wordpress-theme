@@ -1,5 +1,13 @@
 .col1of3 {
     flex-basis: $col-1-of-3;
+    
+    @include media-query($medium-down) {
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-vertical-sm;
+        }
+    }
 }
 
 .col2of3 {
@@ -8,4 +16,12 @@
 
 .col1of2 {
     flex-basis: $col-1-of-2;
+
+    @include media-query($medium-down) {
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-vertical-sm;
+        }
+    }
 }

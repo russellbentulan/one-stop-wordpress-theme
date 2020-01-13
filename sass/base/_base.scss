@@ -116,6 +116,10 @@ table,
 address,
 span {
   font-size: $font-size-md;
+
+  @include media-query($medium-down) {
+    font-size: 1.6rem;
+  }
 }
 
 img {

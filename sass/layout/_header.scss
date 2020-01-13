@@ -9,6 +9,10 @@
     max-width: 18rem;
     height: auto;
     line-height: 0;
+
+    @include media-query($medium-down) {
+      max-width: 12rem;
+    }
   }
 }
 
