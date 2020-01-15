@@ -37,13 +37,20 @@ $grid-max-width: 114rem;
 $gutter-horizontal: 2.5vw;
 $gutter-horizontal-lg: calc( #{$gutter-horizontal} * 2 );
 $gutter-vertical: 8rem;
-$gutter-vertical-sm: 4rem;
+$gutter-vertical-sm: 1.6rem;
 
 $gutter-paragraph: 2rem;
 
-$col-1-of-2: calc( (100% - #{$gutter-horizontal}) / 2 );
-$col-1-of-3: calc( (100% - #{$gutter-horizontal} * 2) / 3 );
-$col-2-of-3: calc( (100% - #{$gutter-horizontal}) / 3 * 2);
+// Grid
+$grid-small: 26em;
+$grid-medium: 36em;
+$grid-large: 50em;
+$grid-widescreen: 87.5em;  
+$grid-gutter: 30px;
+
+$col-1-of-2: calc( (100% - #{$grid-gutter}) / 2 );
+$col-1-of-3: calc( (100% - #{$grid-gutter} * 2) / 3 );
+$col-2-of-3: calc( (100% - #{$grid-gutter}) / 3 * 2);
 
 // Typography
 
@@ -53,12 +60,6 @@ $font-size-lg: 2.4rem;
 $font-heading: "Rift", sans-serif;
 $font-paragraph: "Acumin Pro", sans-serif;
 
-// Grid
-$grid-small: 30em;
-$grid-medium: 36em;
-$grid-large: 50em;
-$grid-widescreen: 87.5em;  
-$grid-gutter: 30px;
 
 // Breakpoints used with the media-query mixin
 $extra-small: 'extraSmall';

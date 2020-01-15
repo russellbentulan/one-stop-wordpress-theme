@@ -5,11 +5,13 @@
   letter-spacing: 0.5px;
   display: inline-block;
   transform: skewX(-5deg);
-  padding: 0 1.2rem;
-  background: $color-accent;
+  padding: 4px 1.2rem;
   text-align: center;
   line-height: 1.4;
-  transition: .2s all ease-out;
+  transition: .35s all ease-in-out;
+  background: $color-accent;
+  overflow: hidden;
+  position: relative;
   
   &::after {
     display: inline-block;
@@ -19,14 +21,33 @@
     margin-left: 5px;
     color: $color-primary-dark;
     transition: .2s all ease-out;
+    transition-delay: .2s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-primary-dark;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: .35s transform ease-in-out;
   }
 
   &:hover,
   &:focus {
-    padding: 0 1.4rem;  
+    color: #FFF;
+
     &::after {
-      margin-left: 10px;
-      color: $color-secondary-light;
+      margin-left: 12px;
+      color: $color-primary-light;
+    }
+    
+    &::before {
+      transform: translateX(0);
     }
   }
 }

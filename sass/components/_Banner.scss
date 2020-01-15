@@ -1,0 +1,23 @@
+.Banner {
+  &__bg {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 45vh;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__titleContainer {
+    padding: 1rem 2.5rem 1rem 5%;
+    display: inline-block;
+    background: linear-gradient(120deg, $color-secondary, $color-tertiary);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 1rem) 0);
+    color: #FFF;
+    text-shadow: $shadow-text;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}

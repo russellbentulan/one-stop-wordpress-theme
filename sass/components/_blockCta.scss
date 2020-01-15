@@ -1,0 +1,30 @@
+.cta {
+  margin: $gutter-vertical-sm 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  border: 1rem solid $grey-6;
+  border-left: .8rem solid $grey-6;
+  border-right: .8rem solid $grey-6;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: .8rem;
+    background: $grey-6;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-heading;
+    font-style: italic;
+    font-size: 4.2rem;
+    background-color: $grey-6;
+    color: #FFF;
+  }
+
+  .textContainer {
+    padding: 0 5%;
+  }
+}

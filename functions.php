@@ -300,3 +300,17 @@ function remove_thumbnail_dimensions($html, $post_id, $post_image_id)
 	$html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
 	return $html;
 }
+
+add_action('acf/init', 'register_our_blocks');
+
+function register_our_blocks()
+{
+	acf_register_block_type(array(
+		'name'            => 'cta',
+		'title'           => __('Call to Action'),
+		'category'        => 'common',
+		'mode'            => 'auto',
+		'icon'            => 'nametag',
+		'render_template' => 'cta.php',
+	));
+}

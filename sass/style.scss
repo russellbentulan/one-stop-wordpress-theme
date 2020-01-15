@@ -11,10 +11,15 @@
 @import 'base/normalize',
         'base/base',
         'base/typography';
+
+@import 'util/textContainer';
         
 @import 'components/buttons',
         'components/comments',
-        'components/toggleButton';
+        'components/toggleButton',
+        'components/Banner',
+        'components/PageContent',
+        'components/blockCta';
 
 @import 'layout/flexGrid',
         'layout/header',
