@@ -1,0 +1,51 @@
+.wpcf7,
+[class*="wpcf7"] {
+  & * {
+    width: 100%;
+    // overflow: hidden;
+  }
+
+  input:not([type="submit"]),
+  textarea {
+    padding: 1rem .6rem;
+    line-height: 1;
+    border: 1.2px solid $grey-3;
+
+    &:focus {
+      border: 1.2px solid $color-secondary; 
+      box-shadow: 0 0 1.6px 1.6px rgba($color-accent-dark, .45);
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $color-accent;
+    border: 1.2px solid $color-accent-dark;
+    transition: .2s all ease-in-out;
+    @extend .btn;
+
+    &:hover {
+      background-color: $color-accent-dark;
+      color: #FFF;
+    }
+  }
+
+  label {
+    font-family: $font-heading;
+  }
+}
+
+.ShopInfo {
+  margin-bottom: $grid-gutter;
+  &__location {
+    height: 50vh;
+    min-height: 450px;
+  }
+
+  &__field {
+    display: block;
+  }
+
+  &__address{
+    margin-bottom: $gutter-vertical-sm;
+  }
+}

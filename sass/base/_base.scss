@@ -18,7 +18,7 @@ html {
   margin: 0 auto;
 
   & > *:not(:last-child) {
-    margin-right: $gutter-horizontal;
+    margin-right: $grid-gutter;
   }
 }
 
